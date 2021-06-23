@@ -18,17 +18,23 @@ use Psr\Http\Message\ServerRequestInterface;
 use Tqdev\PhpCrudApi\Api;
 use Outlandish\PhpCrudApi\SecureConfig;
 
-Route::any('/{any}', function (ServerRequestInterface $request) {
+Route::any('{any}', function (ServerRequestInterface $request) {
     $config = new SecureConfig([
-        'username' => 'admin',
-        'password' => 'password',
-        'database' => 'lex',
-        'port' => '5432',
-        'driver' => 'pgsql',
+        'username' => '',
+        'password' => '',
+        'address' => base_path() . DIRECTORY_SEPARATOR . "database" . DIRECTORY_SEPARATOR . "animals.sqlite",
+        'database' => 'main',
+        'driver' => 'sqlite',
         'basePath' => '/api',
-    ],["docs" => ["id"]]);
+    ], ["users" =>
+            ["id", "display_name"],
+        "pets" =>
+            ["id", "name", "favourite_food", "species", "owner"]
+    ]);
+
     $api = new Api($config);
     $response = $api->handle($request);
+
     return $response;
 })->where('any', '.*');
 

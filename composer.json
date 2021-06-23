@@ -13,7 +13,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "symfony/psr-http-message-bridge": "^2.1",
-        "outlandish/php-crud-api": "*"
+        "outlandish/php-crud-api": "*",
+      "ext-pdo": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
