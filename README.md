@@ -97,7 +97,7 @@ The app defines a set of permissions that allow you to:
 
 ### Check that you can read the users table
 ```bash
-curl http://localhost:800/laravel-crud-api/public/api/records/users
+curl http://localhost:8000/api/records/users
 ```
 ### Check that you can't write to the users table
 ```bash
@@ -105,12 +105,12 @@ curl http://localhost:800/laravel-crud-api/public/api/records/users
 curl --header "Content-Type: application/json" \
 --request POST \
 --data '{"id":"8","password":"123Password"}' \
-http://localhost:800/laravel-crud-api/public/api/records/users
+http://localhost:8000/api/records/users
 ```
 
 ### Check that you can read the pets table
 ```bash
-curl http://localhost:800/laravel-crud-api/public/api/records/pets
+curl http://localhost:8000/api/records/pets
 ```
 
 ### Check that you can write to the pets table
@@ -123,10 +123,10 @@ curl --header "Content-Type: application/json" \
 "species": "cartoon_dog", 
 "owner": 1 
 }' \
-http://localhost:800/laravel-crud-api/public/api/records/pets
+http://localhost:8000/api/records/pets
 ```
 
 ### Check that your new entry is in the pets table
 ```bash
-curl http://localhost:800/laravel-crud-api/public/api/records/pets
+curl http://localhost:8000/api/records/pets
 ```
