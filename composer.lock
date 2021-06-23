@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "245dc20f6531e515de463ecfc3244322",
+    "content-hash": "4e64d71b02b971e57fc38088267badfa",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -857,6 +857,27 @@
             "time": "2021-04-26T09:17:50+00:00"
         },
         {
+            "name": "harry/php-crud-api-secure",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.outlandish.com:harry/php-crud-api-secure.git",
+                "reference": "a81cee80a1b8a2211f5d82dd0dd6907a290f4a7f"
+            },
+            "require": {
+                "mevdschee/php-crud-api": "^2.12"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "description": "Secure by default wrapper around mevdschee/php-crud-api.",
+            "time": "2021-06-23T20:37:59+00:00"
+        },
+        {
             "name": "laminas/laminas-diactoros",
             "version": "2.6.0",
             "source": {
@@ -1022,16 +1043,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.48.0",
+            "version": "v8.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "014443366257e4fa34071882e2b04217274a3ec9"
+                "reference": "edc138060a13c9e5f15c005fad5f6a39b4ccf5fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/014443366257e4fa34071882e2b04217274a3ec9",
-                "reference": "014443366257e4fa34071882e2b04217274a3ec9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/edc138060a13c9e5f15c005fad5f6a39b4ccf5fa",
+                "reference": "edc138060a13c9e5f15c005fad5f6a39b4ccf5fa",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1207,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-22T13:41:32+00:00"
+            "time": "2021-06-23T13:41:59+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2036,29 +2057,6 @@
                 "source": "https://github.com/opis/closure/tree/3.6.2"
             },
             "time": "2021-04-09T13:42:10+00:00"
-        },
-        {
-            "name": "outlandish/php-crud-api",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "/var/www/php-crud-api-secure",
-                "reference": "a13d0468b8cdee17a8af5e6f40564787cfb00e74"
-            },
-            "require": {
-                "mevdschee/php-crud-api": "^2.12"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "": "src/"
-                }
-            },
-            "description": "Secure by default wrapper around mevdschee/php-crud-api.",
-            "transport-options": {
-                "symlink": false,
-                "relative": false
-            }
         },
         {
             "name": "php-http/message-factory",
@@ -8051,11 +8049,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "harry/php-crud-api-secure": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "ext-pdo": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
