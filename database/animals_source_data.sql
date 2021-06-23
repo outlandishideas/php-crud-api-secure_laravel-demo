@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
     id           INT NOT NULL PRIMARY KEY,
@@ -12,10 +13,10 @@ VALUES (1, 'harry', 'password123', 'harry@outlandish.com');
 INSERT INTO users (id, display_name, password, email)
 VALUES (2, 'randomMan', 'password456', 'random@man.com');
 
-
+DROP TABLE IF EXISTS pets;
 CREATE TABLE pets
 (
-    id             INT NOT NULL PRIMARY KEY,
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
     name           TEXT,
     favourite_food TEXT,
     species        TEXT,

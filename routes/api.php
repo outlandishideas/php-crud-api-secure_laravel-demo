@@ -19,6 +19,29 @@ use Tqdev\PhpCrudApi\Api;
 use Outlandish\PhpCrudApi\SecureConfig;
 
 Route::any('{any}', function (ServerRequestInterface $request) {
+
+    /* READ ONLY CONFIG */
+//    $table_columns_mapping = [
+//        "users" =>
+//            ["id", "display_name"],
+//        "pets" =>
+//            ["id", "name", "favourite_food", "species", "owner"]
+//    ];
+
+    /* SEPARATE WRITE AND READ CONFIG */
+    $table_columns_mapping = [
+        "read" => [
+            "users" =>
+                ["id", "display_name"],
+            "pets" =>
+                ["id", "name", "favourite_food", "species", "owner"]
+        ],
+        "write" => [
+            "pets" =>
+                ["id", "name", "favourite_food", "species", "owner"]
+        ]
+    ];
+
     $config = new SecureConfig([
         'username' => '',
         'password' => '',
@@ -26,11 +49,7 @@ Route::any('{any}', function (ServerRequestInterface $request) {
         'database' => 'main',
         'driver' => 'sqlite',
         'basePath' => '/api',
-    ], ["users" =>
-            ["id", "display_name"],
-        "pets" =>
-            ["id", "name", "favourite_food", "species", "owner"]
-    ]);
+    ], $table_columns_mapping);
 
     $api = new Api($config);
     $response = $api->handle($request);
