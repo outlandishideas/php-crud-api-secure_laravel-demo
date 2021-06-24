@@ -49,6 +49,9 @@ Route::any('{any}', function (ServerRequestInterface $request) {
         'database' => 'main',
         'driver' => 'sqlite',
         'basePath' => '/api',
+        'middlewares' => 'apiKeyAuth,authorization',
+        'apiKeyAuth.keys' => 'password1234,secretAPIkey',
+        'apiKeyAuth.mode' => 'optional',
     ], $table_columns_mapping);
 
     $api = new Api($config);
