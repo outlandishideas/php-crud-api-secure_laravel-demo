@@ -862,7 +862,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.outlandish.com:harry/php-crud-api-secure.git",
-                "reference": "3e04ff6657e883f45ac47939517706fbdfaf1e1f"
+                "reference": "74510b3258eae022395a284070200c89c620fc5d"
             },
             "require": {
                 "mevdschee/php-crud-api": "^2.12"
@@ -875,7 +875,7 @@
                 }
             },
             "description": "Secure by default wrapper around mevdschee/php-crud-api.",
-            "time": "2021-06-23T22:03:30+00:00"
+            "time": "2021-06-23T22:45:35+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
