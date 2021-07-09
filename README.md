@@ -1,6 +1,6 @@
 # Laravel CRUD API with secure-by-default config demo
 
-This is a demo of how you can use `https://gitlab.outlandish.com/harry/php-crud-api-secure` to bootstrap a CRUD API
+This is a demo of how you can use `https://github.com/outlandishideas/php-crud-api-secure` to bootstrap a CRUD API
 using Laravel.
 
 ## Installation
@@ -8,15 +8,15 @@ using Laravel.
 ### Grab a copy of this repo and change into the directory:
 
 ```bash
-git clone git@gitlab.outlandish.com:harry/php-crud-api-secure-demo.git
-cd php-crud-api-secure-demo
+git clone git@github.com:outlandishideas/php-crud-api-secure_laravel-demo.git
+cd php-crud-api-secure_laravel-demo
 ```
 This is a project started with the `composer create-project laravel/laravel {directory} 4.2 --prefer-dist` 
 command. It's almost all boilerplate. TODO: delete unneeded boilerplate 
 
 The main files you're interested are:
-* `composer.json` which includes the `harry/php-crud-api-secure` library
-* `routes/api.php` which boostraps the php-crud-api with the SecureConfig from `harry/php-crud-api-secure`
+* `composer.json` which includes the `outlandishideas/php-crud-api-secure` library
+* `routes/api.php` which boostraps the php-crud-api with the SecureConfig from `outlandishideas/php-crud-api-secure`
 
 ### Install the requirements
 
